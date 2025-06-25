@@ -1,0 +1,12 @@
+pandas
+numpy
+tensorflow
+scikit-learn
+selenium
+beautifulsoup4
+requests
+fastapi
+uvicorn
+python-telegram-bot==20.3
+webdriver-manager
+python-dotenv
