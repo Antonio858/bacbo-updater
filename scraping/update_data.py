@@ -3,7 +3,7 @@ import time
 import os
 import pandas as pd
 import subprocess
-from scraping.historicbet_scraper import fetch_data_from_historicbet
+from historicbet_scraper import fetch_data_from_historicbet
 from model.predictor import BacBoPredictor
 
 GIT_USERNAME = os.getenv("GIT_USERNAME")
