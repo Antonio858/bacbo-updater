@@ -20,4 +20,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Comando para ejecutar el actualizador de datos
-CMD ["python", "update_data.py"]
+CMD ["python", "scraping/update_data.py"]
