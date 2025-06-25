@@ -3,10 +3,10 @@ FROM python:3.10-slim
 # Establecer el directorio de trabajo
 WORKDIR /app
 
-# Copiar todos los archivos del proyecto al contenedor
+# Copiar todo el proyecto
 COPY . /app
 
-# Instalar dependencias del sistema necesarias para algunas bibliotecas Python
+# Instalar dependencias del sistema
 RUN apt-get update && apt-get install -y \
     build-essential \
     python3-dev \
@@ -19,5 +19,6 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Comando para ejecutar el actualizador de datos
-CMD ["python", "scraping/update_data.py"]
+# Cambiar directorio y ejecutar el script
+WORKDIR /app/scraping
+CMD ["python", "update_data.py"]
