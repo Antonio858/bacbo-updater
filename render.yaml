@@ -1,0 +1,8 @@
+# render.yaml
+services:
+  - type: worker
+    name: bacbo-updater
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
