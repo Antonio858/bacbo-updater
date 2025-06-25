@@ -6,8 +6,8 @@ import subprocess
 from scraping.historicbet_scraper import fetch_data_from_historicbet
 from model.predictor import BacBoPredictor
 
-GIT_USERNAME = os.getenv("GIT_USERNAME")
-GIT_EMAIL = os.getenv("GIT_EMAIL")
+GIT_USERNAME = os.getenv("Antonio858")
+GIT_EMAIL = os.getenv("antonio.haernandez334@gmail.com")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 REPO_URL = f"https://{GIT_USERNAME}:{GITHUB_TOKEN}@github.com/{GIT_USERNAME}/bacbo-updater.git"
@@ -46,4 +46,4 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"❌ Error durante la actualización: {e}")
 
-        time.sleep(10)  # Espera 10 segundos
+        time.sleep(300)  # Espera 5 minutos
